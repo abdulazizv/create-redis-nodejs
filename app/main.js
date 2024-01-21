@@ -2,7 +2,7 @@ const net = require("node:net")
 
 const server = net.createserver((connection)=> {
     connection.on("data",(buffer) => {
-
+        handleRequest(buffer, connection);
     })
 })
 
